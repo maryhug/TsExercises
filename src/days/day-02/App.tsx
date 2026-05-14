@@ -14,6 +14,7 @@ import AuthContextApp from './exercises/AuthContextApp';
 import ContactForm from './exercises/ContactForm';
 import PostList from './exercises/PostList';
 import UserDashboard from './exercises/UserDashboard';
+import { ContextApp } from './context-exercise/ContextApp';
 
 export default function Day02App() {
   return (
@@ -40,6 +41,11 @@ export default function Day02App() {
         <ContactForm />
         <PostList />
         <UserDashboard />
+        
+        <div style={{ marginTop: '3rem', borderTop: '2px solid #ccc', paddingTop: '1rem' }}>
+            <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Ejercicio Adicional: Context API y Roles</h3>
+            <ContextApp />
+        </div>
       </div>
     </section>
   );
