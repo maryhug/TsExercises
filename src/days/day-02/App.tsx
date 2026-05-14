@@ -42,10 +42,7 @@ export default function Day02App() {
         <PostList />
         <UserDashboard />
         
-        <div style={{ marginTop: '3rem', borderTop: '2px solid #ccc', paddingTop: '1rem' }}>
-            <h3 style={{ textAlign: 'center', marginBottom: '1rem' }}>Ejercicio Adicional: Context API y Roles</h3>
-            <ContextApp />
-        </div>
+        <ContextApp />
       </div>
     </section>
   );

@@ -6,12 +6,11 @@ export const Navbar: React.FC = () => {
   const { user } = useUser();
 
   return (
-    <nav style={{ padding: '15px', background: '#333', color: 'white', borderRadius: '8px', marginBottom: '16px' }}>
-      <h2 style={{ margin: '0 0 10px 0' }}>Mi Aplicación (Context Api)</h2>
-      <p style={{ margin: 0, fontWeight: 'bold' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', background: 'var(--bg)', borderRadius: '8px', border: '1px solid var(--border)', marginBottom: '1rem' }}>
+      <strong style={{ color: 'var(--text-h)' }}>Mi Aplicación (Ext)</strong>
+      <span style={{ fontSize: '0.9rem', color: user ? 'var(--accent)' : 'var(--text)', fontWeight: 500 }}>
         {user ? `Bienvenido, ${user.name}` : 'No has iniciado sesión'}
-      </p>
-    </nav>
+      </span>
+    </div>
   );
 };
-

@@ -10,11 +10,13 @@ export const UserProfile: React.FC = () => {
   }
 
   return (
-    <div style={{ border: '1px solid #ddd', padding: '16px', borderRadius: '8px', marginBottom: '16px' }}>
-      <h3 style={{ margin: '0 0 10px 0' }}>Perfil de Usuario</h3>
-      <p style={{ margin: '5px 0' }}><strong>Nombre:</strong> {user.name}</p>
-      <p style={{ margin: '5px 0' }}><strong>Email:</strong> {user.email}</p>
-      <p style={{ margin: '5px 0' }}><strong>Rol:</strong> {user.role}</p>
+    <div className="day-02__field" style={{ marginBottom: '1rem', background: 'var(--bg-card)' }}>
+      <span className="day-02__field-label">Información Activa</span>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '0.9rem', color: 'var(--text)' }}>
+        <p style={{ margin: 0 }}><strong>Nombre:</strong> {user.name}</p>
+        <p style={{ margin: 0 }}><strong>Email:</strong> {user.email}</p>
+        <p style={{ margin: 0 }}><strong>Rol activo:</strong> {user.role}</p>
+      </div>
     </div>
   );
 };

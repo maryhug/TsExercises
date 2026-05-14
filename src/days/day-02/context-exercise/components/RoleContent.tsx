@@ -8,12 +8,11 @@ export const RoleContent: React.FC = () => {
   if (!user) return null;
 
   return (
-    <div style={{ padding: '16px', borderRadius: '8px', marginBottom: '16px', background: '#e3f2fd', color: '#01579b' }}>
-      <h3 style={{ margin: '0 0 10px 0' }}>Contenido de Rol Actual</h3>
-      {user.role === 'admin' && <p>🛡️ <strong>Panel de Administración:</strong> Tienes acceso total para modificar a otros usuarios.</p>}
-      {user.role === 'student' && <p>📚 <strong>Panel del Estudiante:</strong> Aquí puedes revisar tus clases y calificaciones.</p>}
-      {user.role === 'guest' && <p>👀 <strong>Vista de Invitado:</strong> Estás en modo de lectura, por favor valida un rol entero si requieres más funcionalidades.</p>}
+    <div className="day-02__alert day-02__alert--info" style={{ marginBottom: '1rem' }}>
+      <h4 style={{ margin: '0 0 8px 0', fontSize: '0.95rem' }}>Dashboard por Funciones:</h4>
+      {user.role === 'admin' && <span>🛡️ <strong>Panel de Administración:</strong> Tienes acceso total para modificar a otros usuarios.</span>}
+      {user.role === 'student' && <span>📚 <strong>Panel del Estudiante:</strong> Aquí puedes revisar tus clases y calificaciones.</span>}
+      {user.role === 'guest' && <span>👀 <strong>Vista de Invitado:</strong> Estás en modo de lectura, por favor valida un rol entero si requieres más funcionalidades.</span>}
     </div>
   );
 };
-

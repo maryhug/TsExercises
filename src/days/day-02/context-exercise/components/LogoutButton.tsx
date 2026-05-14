@@ -9,20 +9,17 @@ export const LogoutButton: React.FC = () => {
 
   return (
     <button
+      className="day-02__button"
       onClick={logout}
       style={{
-        background: '#dc3545',
-        color: 'white',
-        padding: '10px 16px',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
+        marginTop: '1rem',
         width: '100%',
-        marginTop: '16px'
+        color: '#dc3545',
+        borderColor: '#f5c6cb',
+        background: '#f8d7da'
       }}
     >
       Cerrar Sesión
     </button>
   );
 };
-

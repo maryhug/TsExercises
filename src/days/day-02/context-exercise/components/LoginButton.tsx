@@ -22,30 +22,32 @@ export const LoginButton: React.FC = () => {
   };
 
   return (
-    <div style={{ margin: '16px 0', padding: '16px', background: '#f5f5f5', borderRadius: '8px' }}>
-      <h3 style={{ margin: '0 0 10px 0' }}>Simular Acceso</h3>
-      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+    <div className="day-02__grid" style={{ marginBottom: '1rem' }}>
+      <div className="day-02__field">
+        <span className="day-02__field-label">Selecciona un Rol Simulable</span>
         <select
           value={role}
           onChange={(e) => setRole(e.target.value as any)}
-          style={{ padding: '8px', flex: 1, borderRadius: '4px', border: '1px solid #ccc' }}
+          style={{ width: '100%', padding: '0.5rem 0.75rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '6px', color: 'var(--text-h)', fontSize: '0.9rem', outline: 'none' }}
         >
           <option value="student">Estudiante</option>
           <option value="admin">Administrador</option>
           <option value="guest">Invitado</option>
         </select>
+      </div>
 
+      <div style={{ display: 'flex', alignItems: 'flex-end' }}>
         <button
+          className="day-02__button day-02__button--primary"
           onClick={handleLogin}
           disabled={isLoading}
-          style={{ padding: '8px 16px', background: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+          style={{ width: '100%', height: '42px' }}
         >
           {isLoading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
         </button>
       </div>
 
-      {error && <p style={{ color: 'red', marginTop: '10px' }}>Error: {error}</p>}
+      {error && <div className="day-02__alert day-02__alert--warning" style={{ gridColumn: '1 / -1' }}>{error}</div>}
     </div>
   );
 };
-

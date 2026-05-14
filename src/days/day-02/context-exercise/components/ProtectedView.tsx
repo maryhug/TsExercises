@@ -8,15 +8,15 @@ export const ProtectedView: React.FC<{ children: ReactNode }> = ({ children }) =
 
   if (!user) {
     return (
-      <div style={{ background: '#ffebee', color: '#c62828', padding: '16px', borderRadius: '8px' }}>
-        ⛔ Debes iniciar sesión para ver este contenido.
+      <div className="day-02__alert day-02__alert--warning">
+        ⛔ Debes iniciar sesión para ver este contenido protegido.
       </div>
     );
   }
 
   return (
-    <div style={{ border: '2px dashed #4caf50', padding: '16px', borderRadius: '8px' }}>
-      <h4 style={{ margin: '0 0 10px 0', color: '#388e3c' }}>🔒 Zona Protegida (Secretos del Proyecto)</h4>
+    <div style={{ border: '1px dashed var(--accent)', padding: '16px', borderRadius: '8px', background: 'var(--bg)' }}>
+      <div className="day-02__field-label" style={{ marginBottom: '8px', color: 'var(--accent)' }}>🔒 Zona Protegida (Secretos del Proyecto)</div>
       {children}
     </div>
   );

@@ -11,9 +11,9 @@ export const ContextApp: React.FC = () => {
   return (
     // Es imperativo encerrar a todos los componentes que usarán "useUser" en el provider
     <UserProvider>
-      <div style={{ fontFamily: 'sans-serif', border: '1px solid #ccc', margin: '20px auto', padding: '20px', borderRadius: '8px' }}>
-        <h2>Context API & Custom Hooks</h2>
-        <p style={{ color: '#666' }}>Ejercicio integrador de estado global intermedio</p>
+      <article className="day-02__exercise">
+        <h3 className="day-02__exercise-title">Context API & Custom Hooks</h3>
+        <p className="day-02__exercise-description">Ejercicio integrador independiente de estado global y Manejo de Roles.</p>
 
         <Navbar />
         <LoginButton />
@@ -21,11 +21,13 @@ export const ContextApp: React.FC = () => {
         <RoleContent />
 
         <ProtectedView>
-          <p>Esta es información que solo pueden ver las personas que ya rellenaron o traen un inicio de sesión persistido.</p>
+          <div className="day-02__alert day-02__alert--info">
+             Esta es información que solo pueden ver las personas que ya rellenaron o traen un inicio de sesión persistido.
+          </div>
         </ProtectedView>
 
         <LogoutButton />
-      </div>
+      </article>
     </UserProvider>
   );
 };
