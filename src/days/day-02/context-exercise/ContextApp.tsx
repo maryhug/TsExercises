@@ -12,8 +12,12 @@ export const ContextApp: React.FC = () => {
     // Es imperativo encerrar a todos los componentes que usarán "useUser" en el provider
     <UserProvider>
       <article className="day-02__exercise">
-        <h3 className="day-02__exercise-title">Context API & Custom Hooks</h3>
-        <p className="day-02__exercise-description">Ejercicio integrador independiente de estado global y Manejo de Roles.</p>
+        <h3 className="day-02__exercise-title">
+          Context API & Custom Hooks
+        </h3>
+        <p className="day-02__exercise-description">
+          Ejercicio integrador independiente de estado global y Manejo de Roles.
+        </p>
 
         <Navbar />
         <LoginButton />

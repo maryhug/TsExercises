@@ -20,9 +20,15 @@ export default function Day02App() {
   return (
     <section className="day-02">
       <header className="day-02__header">
-        <p className="day-02__subtitle">Día 02 — Práctica</p>
-        <h2 className="day-02__title">React Hooks (Nivel Intermedio)</h2>
-        <p>15 ejercicios progresivos para dominar los Hooks de React, con código comentado, modular y estructurado visualmente.</p>
+        <p className="day-02__subtitle">
+          Día 02 — Práctica
+        </p>
+        <h2 className="day-02__title">
+          React Hooks
+        </h2>
+        <p>
+          15 ejercicios progresivos para dominar los Hooks de React, con código comentado, modular y estructurado visualmente.
+        </p>
       </header>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>

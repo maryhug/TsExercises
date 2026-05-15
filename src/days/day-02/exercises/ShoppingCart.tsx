@@ -1,10 +1,14 @@
 import { useState, useMemo } from 'react';
 
+// .reduce() es un método de arrays en JavaScript que sirve para convertir una lista en un solo valor.
+
 export default function ShoppingCart() {
   const [cart, setCart] = useState([{ id: 1, name: 'Teclado', price: 120, quantity: 1 }]);
 
-  const totalItems = useMemo(() => cart.reduce((acc, i) => acc + i.quantity, 0), [cart]);
-  const totalCost = useMemo(() => cart.reduce((acc, i) => acc + (i.price * i.quantity), 0), [cart]);
+  const totalItems = useMemo(() =>
+      cart.reduce((acc, i) => acc + i.quantity, 0), [cart]);
+  const totalCost = useMemo(() =>
+      cart.reduce((acc, i) => acc + (i.price * i.quantity), 0), [cart]);
 
   const updateQ = (id: number, delta: number) => {
     setCart(prev => prev.map(i => {
